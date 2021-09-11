@@ -15,3 +15,21 @@ if (ch> 'Z') ch -= ('Z'+1- 'A');
 printf("%c",ch);
 }
 %%
+
+/* b) Here values are taken from the file q2input.txt ~ */
+
+%{
+#include<stdio.h>
+%}
+%%
+[a-wA-W] fprintf(yyout,"%c",yytext[0]+3);
+[xyzXYZ] fprintf(yyout,"%c",yytext[0]-23);
+%%
+
+int main()
+{
+ yyin=fopen("q2input.txt","r");
+ yyout=fopen("q2file2.txt","w");
+ yylex();
+}
+
