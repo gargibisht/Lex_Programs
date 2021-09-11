@@ -3,21 +3,21 @@
 %option noyywrap
 %{
 #include<stdio.h>
-int linecount=0, charcount=0;
+int line_count=0, char_count=0;
 %}
 
 /*Rule Section*/
 %%
-. charcount++;  //characters counter
-\n {charcount++; linecount++;}//line counter
+. char_count++;  //characters counter
+\n {char_count++; line_count++;}//line counter
 %%
 
 int main()
 {
 	yyin=fopen("q1input.txt", "r");
 	yylex();
-	printf("\nNo. of lines = %d",linecount);
-	printf("\nNo. of characters=%d\n", charcount);
+	printf("\nNo. of lines = %d",line_count);
+	printf("\nNo. of characters=%d\n", char_count);
 }
 
 
