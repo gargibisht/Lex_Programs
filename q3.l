@@ -2,6 +2,7 @@
 
 /* a) Here values are taken from the Standard Input ~ */
 
+%option noyywrap
 %{
 #include <strings.h>
 
@@ -27,6 +28,7 @@ int main (void) {
 
 /* b) Here values are taken from the file q3input.txt ~*/
 
+%option noyywrap
 %{
 #include <strings.h>
 int counter = 0;
