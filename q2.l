@@ -18,6 +18,7 @@ printf("%c",ch);
 
 /* b) Here values are taken from the file q2input.txt ~ */
 
+%option noyywrap
 %{
 #include<stdio.h>
 %}
